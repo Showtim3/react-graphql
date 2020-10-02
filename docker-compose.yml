@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    tty: true
+    build: ./frontend
+    container_name: rg_frontend
+    ports:
+      - 3000:3000
+
+  backend:
+    build: ./server
+    container_name: rg_backend
+    ports:
+      - 4444:4444

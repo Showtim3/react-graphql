@@ -1,0 +1,14 @@
+version: '3'
+services:
+  frontend:
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rg-frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/frontend
+      - /frontend/node_modules
+
